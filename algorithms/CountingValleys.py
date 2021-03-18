@@ -14,8 +14,21 @@
 #     \/\/
 
 def counting_valleys(steps, path):
-    print(path)
+    up_down_step = count_valleys = 0
+
+    for each_step in path:
+        print(each_step)
+
+        if each_step == "U":
+            up_down_step += 1
+        else:
+            up_down_step -= 1
+
+        if each_step == 'U' and up_down_step == 0:
+            count_valleys += 1
+
+    print(count_valleys)
 
 
 if __name__ == '__main__':
-    counting_valleys(None, None)
+    counting_valleys(8, "DDUUDDUDUUUD")
