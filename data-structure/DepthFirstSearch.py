@@ -17,14 +17,11 @@ visited = set()  # Set to keep track of visited nodes.
 
 
 def dfs(visited, graph, node):
-    # if node not in visited:
-    #     print(node)
-    #     visited.add(node)
-    #     for neighbour in graph[node]:
-    #         dfs(visited, graph, neighbour)
-
-    for neighbour in graph[node]:
-        print(neighbour)
+    if node not in visited:
+        print(node, end=" ")
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
 
 
 if __name__ == '__main__':
