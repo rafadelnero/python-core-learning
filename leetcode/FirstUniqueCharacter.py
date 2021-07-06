@@ -1,3 +1,4 @@
+import collections
 
 
 def first_unique_char(s: str) -> int:
@@ -5,6 +6,20 @@ def first_unique_char(s: str) -> int:
         if s.count(s[i]) == 1:
             return i
 
+    return -1
+
+
+def first_unique_char_user_solution(s: str) -> int:
+    """
+    O(n) complexity
+    """
+    # build hash map : character and how often it appears
+    count = collections.Counter(s)
+
+    # find the index
+    for idx, ch in enumerate(s):
+        if count[ch] == 1:
+            return idx
     return -1
 
 
