@@ -1,10 +1,4 @@
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from leetcode.tree.TreeNode import TreeNode, create_two_levels_tree
 
 
 def max_depth_stack_iteration(root: TreeNode):
@@ -28,11 +22,36 @@ def max_depth_recursion(root):
         return 0
     else:
         left_height = max_depth_recursion(root.left)
+        print(root.val)
         right_height = max_depth_recursion(root.right)
+        print(root.val)
         return max(left_height, right_height) + 1
 
 
+def max_depth_optimal_solution(root):
+    counter = 0
+    height = 0
+
+    if not root:
+        return 0
+
+    q = [root]
+
+    while q:
+        height += 1
+        temp = []
+        for i in q:
+            if i.left:
+                temp.append(i.left)
+            if i.right:
+                temp.append(i.right)
+        q = temp
+
+    return height
+
+
 if __name__ == '__main__':
-    second_node = TreeNode(20, 15, 7)
-    root_node = TreeNode(3, 9, second_node)
-    print(max_depth_stack_iteration(root_node))
+    print(max_depth_recursion(create_two_levels_tree()))
+
+    # 3
+    #     20
