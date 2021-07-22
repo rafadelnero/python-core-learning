@@ -1,14 +1,4 @@
-
-
-class Node:
-    def __init__(self, dataval=None):
-        self.val = dataval
-        self.next = None
-
-
-class SLinkedList:
-    def __init__(self):
-        self.head = None
+from leetcode.linkedlist.Node import Node, SLinkedList, create_default_linked_list
 
 
 def delete_node(node: Node):
@@ -21,13 +11,15 @@ def delete_node(node: Node):
 
 
 if __name__ == '__main__':
-    list1 = SLinkedList()
-    list1.head = Node("4")
+    list1 = create_default_linked_list()
+
+    linkedlist = SLinkedList()
+    linkedlist.head = Node("4")
     e2 = Node("5")
     e3 = Node("1")
     e4 = Node("9")
     # Link first Node to second node
-    list1.head.next = e2
+    linkedlist.head.next = e2
 
     # Link second Node to third node
     e2.next = e3
