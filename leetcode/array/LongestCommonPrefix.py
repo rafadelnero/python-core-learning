@@ -27,5 +27,15 @@ def get_result_as_string(results: dict) -> str:
     return str_result
 
 
+def longest_common_prefix_optimized(strs: List[str]) -> str:
+    min_str = min(strs, key=len)
+    for i, c in enumerate(min_str):
+        for str in strs:
+            if str[i] != c:
+                return min_str[:i]
+    return min_str
+
+
 if __name__ == '__main__':
     print(longest_common_prefix(["flower", "flow", "flight"]))
+    print(longest_common_prefix_optimized(["flower", "flow", "flight"]))
