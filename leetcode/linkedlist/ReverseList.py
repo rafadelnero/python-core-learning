@@ -1,4 +1,4 @@
-from leetcode.linkedlist.Node import Node, SLinkedList
+from leetcode.linkedlist.SLinkedList import Node, SLinkedList
 
 
 def reverse_list_optimized(head: Node) -> Node:

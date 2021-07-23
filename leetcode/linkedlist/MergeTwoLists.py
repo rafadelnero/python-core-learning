@@ -1,4 +1,4 @@
-from leetcode.linkedlist.Node import Node, SLinkedList, create_default_linked_list
+from leetcode.linkedlist.SLinkedList import Node, SLinkedList, create_default_linked_list
 
 
 def merge_two_lists(l1: Node, l2: Node) -> Node:
