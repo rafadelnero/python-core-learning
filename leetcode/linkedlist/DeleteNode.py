@@ -1,7 +1,7 @@
-from leetcode.linkedlist.SLinkedList import Node, SLinkedList, create_default_linked_list
+from leetcode.linkedlist.SLinkedList import ListNode, SLinkedList, create_default_linked_list
 
 
-def delete_node(node: Node):
+def delete_node(node: ListNode):
     """
     :type node: ListNode
     :rtype: void Do not return anything, modify node in-place instead.
@@ -14,10 +14,10 @@ if __name__ == '__main__':
     list1 = create_default_linked_list()
 
     linkedlist = SLinkedList()
-    linkedlist.head = Node("4")
-    e2 = Node("5")
-    e3 = Node("1")
-    e4 = Node("9")
+    linkedlist.head = ListNode("4")
+    e2 = ListNode("5")
+    e3 = ListNode("1")
+    e4 = ListNode("9")
     # Link first Node to second node
     linkedlist.head.next = e2
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     e2.next = e3
     e3.next = e4
 
-    delete_node(e2)
+    delete_node(e3)
 
     printval = list1.head
     while printval is not None:

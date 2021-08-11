@@ -1,7 +1,7 @@
-from leetcode.linkedlist.SLinkedList import Node, SLinkedList
+from leetcode.linkedlist.SLinkedList import ListNode, SLinkedList
 
 
-def reverse_list_optimized(head: Node) -> Node:
+def reverse_list_optimized(head: ListNode) -> ListNode:
     prev_node = None
     curr_node = head
     while curr_node:
@@ -12,8 +12,9 @@ def reverse_list_optimized(head: Node) -> Node:
     head = prev_node
     return head
 
+
 # 4 5 1 9
-def reverse_list(head: Node) -> Node:
+def reverse_list(head: ListNode) -> ListNode:
     current_node = head
     previous_node = None
     while current_node:
@@ -25,10 +26,10 @@ def reverse_list(head: Node) -> Node:
 
 if __name__ == '__main__':
     linkedlist = SLinkedList()
-    linkedlist.head = Node("4")
-    e2 = Node("5")
-    e3 = Node("1")
-    e4 = Node("9")
+    linkedlist.head = ListNode("4")
+    e2 = ListNode("5")
+    e3 = ListNode("1")
+    e4 = ListNode("9")
     # Link first Node to second node
     linkedlist.head.next = e2
 
