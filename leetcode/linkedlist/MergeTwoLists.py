@@ -4,13 +4,16 @@ from leetcode.linkedlist.SLinkedList import ListNode, SLinkedList, print_all_fro
 # https://www.youtube.com/watch?v=K63Mjf-H0B0&ab_channel=KevinNaughtonJr.
 def merge_two_lists_user_solution(l1: ListNode, l2: ListNode) -> ListNode:
     dummy = ListNode(-1)
+    # The head will store the final result
     head = dummy
     while l1 and l2 is not None:
         if l1.val < l2.val:
             dummy.next = l1
+            # Goes to the next l1 element
             l1 = l1.next
         else:
             dummy.next = l2
+            # Goes to the next l2 element
             l2 = l2.next
         dummy = dummy.next
 

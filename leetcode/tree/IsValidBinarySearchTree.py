@@ -1,6 +1,6 @@
 import math
 
-from leetcode.tree.TreeNode import TreeNode, create_two_levels_tree, create_simple_sorted_bst_tree
+from leetcode.tree.TreeNode import TreeNode, create_simple_sorted_bst_tree
 
 
 def is_valid_bst(root: TreeNode) -> bool:
