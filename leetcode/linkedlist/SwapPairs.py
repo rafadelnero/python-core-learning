@@ -48,6 +48,7 @@ def swap_pairs_iterative(head: ListNode) -> ListNode:
 
 if __name__ == '__main__':
     linked_list = SLinkedList()
-    linked_list.add_all([ListNode("1"), ListNode("2"), ListNode("3"), ListNode("4")])
-    head = swap_pairs_iterative(linked_list.head)
+    linked_list.add_all([ListNode("1"), ListNode("2"), ListNode("3"), ListNode("4"), ListNode("5")])
+    # head = swap_pairs_iterative(linked_list.head)
+    head = swap_pairs_recursion(linked_list.head)
     print_all_from_head(head)

@@ -1,15 +1,5 @@
 
 
-# Using a Python dictionary to act as an adjacency list
-graph = {
-    'A': ['B', 'C'],
-    'B': ['D', 'E'],
-    'C': ['F'],
-    'D': [],
-    'E': ['F'],
-    'F': []
-}
-
 # Depth first - goes to the depth of each node
 # https://www.educative.io/edpresso/how-to-implement-depth-first-search-in-python
 
@@ -25,5 +15,15 @@ def dfs(visited, graph, node):
 
 
 if __name__ == '__main__':
+    # Using a Python dictionary to act as an adjacency list
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['D', 'E'],
+        'C': ['F'],
+        'D': [],
+        'E': ['F'],
+        'F': []
+    }
+
     # Driver Code
     dfs(visited, graph, 'A')

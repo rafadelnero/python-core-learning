@@ -10,6 +10,22 @@ def delete_node(node: ListNode):
     node.next = node.next.next
 
 
+def delete_element_node(head: ListNode, data: str) -> ListNode:
+    node = head
+
+    if node.val == data:
+        return head.next
+
+    while node.next:
+        if node.next.val == data:
+            node.next = node.next.next
+            return head
+        print(node.val)
+        node = node.next
+
+    return head
+
+
 if __name__ == '__main__':
     list1 = create_default_linked_list()
 
@@ -25,9 +41,9 @@ if __name__ == '__main__':
     e2.next = e3
     e3.next = e4
 
-    delete_node(e3)
+    head = delete_element_node(linkedlist.head, "9")
 
-    printval = list1.head
+    printval = head
     while printval is not None:
         print(printval.val)
         printval = printval.next

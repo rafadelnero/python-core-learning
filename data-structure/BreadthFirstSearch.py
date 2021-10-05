@@ -1,16 +1,4 @@
 
-graph = {
-  'A': ['B', 'C'],
-  'B': ['D', 'E'],
-  'C': ['F'],
-  'D': [],
-  'E': ['F'],
-  'F': []
-}
-
-visited = []  # List to keep track of visited nodes.
-queue = []     # Initialize a queue
-
 
 # Traverse through nodes from left to right
 # Check the following link https://www.educative.io/edpresso/how-to-implement-a-breadth-first-search-in-python
@@ -29,5 +17,15 @@ def bfs(visited, graph, node):
 
 
 if __name__ == '__main__':
-      # Driver Code
-      bfs(visited, graph, 'A')
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['D', 'E'],
+        'C': ['F'],
+        'D': [],
+        'E': ['F'],
+        'F': []
+    }
+    visited = []  # List to keep track of visited nodes.
+    queue = []  # Initialize a queue
+    # Driver Code
+    bfs(visited, graph, 'A')
